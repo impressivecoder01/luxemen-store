@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 function App() {
   const [jobs, setJobs] = useState([])
   useEffect(()=>{
-    fetch(`http://localhost:5000/jobs`)
+    fetch(`https://luxemen-server.vercel.app/jobs`)
     .then(res => res.json())
     .then(data => setJobs(data))
   },[])
@@ -14,8 +14,8 @@ function App() {
   return (
     <>
      
-      <h1 className='text-5xl font-bold'>Coming Soon</h1>
-      <p className='text-5xl font-bold'>coming</p>
+      {/* <h1 className='text-5xl font-bold'>Coming Soon</h1>
+      <p className='text-5xl font-bold'>coming</p> */}
      {
       jobs.map(job => <div className="card bg-base-100 w-96 shadow-xl">
         <figure>
